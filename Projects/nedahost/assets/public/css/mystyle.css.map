@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AEEA,AAAA,IAAI,CAAA,EACA,MAAM,EAAE,GAAG,EACX,OAAO,EAAE,GAAG,GACf",
+    "sources": [
+        "../sass/mystyle.scss",
+        "../sass/_styles.scss",
+        "../sass/_global.scss"
+    ],
+    "names": [],
+    "file": "mystyle.css"
+}
