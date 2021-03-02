@@ -1,0 +1,48 @@
+.header{
+    background-image: url(../../images/nedahost.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    width:100vw;
+    height: 100vh;
+    max-width :100%;
+    color: $hdcolor ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    .topheader{
+        order: 1;
+        align-self: flex-start;
+        margin: auto;
+        #logo{
+            text-align: center;
+            .svg-logo{
+                width: 15.6875rem;
+                height: auto;
+            }
+        }
+    }
+    .middleheader{
+        order: 2;
+        text-align: center;
+        margin: auto;
+        align-self: center;
+        &__text{
+            @include font-size(20);
+        }
+
+        &__centertext{
+            @include font-size(40);
+        }
+        
+        &__bottomtext{
+            @include font-size(13);
+        }
+    }
+    .bottomheader{
+        order: 3;
+        align-self: flex-end;
+    }
+}
