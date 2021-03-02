@@ -1,4 +1,18 @@
 /*******************
 ** Colors 
 *******************/
+/******************
+** Fonts Sizes
+******************/
+html { font-size: 100%; box-sizing: border-box; }
+
+*, *::before, *::after { box-sizing: inherit; }
+
+body { background-color: #000e2f; margin: 0px; padding: 0px; line-height: normal; font-size: 0.875rem; }
+
+a, a:visited, a:hover { text-decoration: none; }
+
+.wrapper { margin: 0 auto; }
+
+main { background-color: #ffffff; width: 100%; background-size: 26.25rem; background-image: linear-gradient(to right, #ffffff, #ffffff 418px, #e9e9eb 0); background-repeat: repeat; }
 /*# sourceMappingURL=mystyle.css.map */

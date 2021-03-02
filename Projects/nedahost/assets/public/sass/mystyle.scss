@@ -2,3 +2,12 @@ $MQs: true;
 
 @import 'styles';
 
+main{
+    background-color: $bgmain;
+    width: 100%;
+    background-size: 26.25rem; // 420px
+    background-image: linear-gradient(to right, #ffffff, #ffffff 418px, #e9e9eb 0);
+    background-repeat: repeat;
+}
+
+
