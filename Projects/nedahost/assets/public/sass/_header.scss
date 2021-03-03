@@ -2,7 +2,7 @@
     background-image: url(../../images/nedahost.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
     width:100vw;
     height: 100vh;
     max-width :100%;
@@ -16,6 +16,7 @@
         order: 1;
         align-self: flex-start;
         margin: auto;
+        height: 0;
         #logo{
             text-align: center;
             .svg-logo{
@@ -35,6 +36,7 @@
 
         &__centertext{
             @include font-size(40);
+            padding: 10px 0;
         }
         
         &__bottomtext{
