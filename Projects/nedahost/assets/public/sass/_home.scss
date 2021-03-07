@@ -1,0 +1,47 @@
+.outerprojects{
+    padding: 40px 0 30px;
+    &__Listprojects{
+        padding: 0 10px;
+        .homeprojects{
+            padding: 0px 0 10px;
+            .numberproject{
+                font-family: $f-secondary;
+                font-weight: 700;
+                color: $hovertext;
+                @include font-size(130);
+            }
+            .imgproject{
+                figure{
+                    margin: 0;
+                    padding: 0;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        border: 0;
+                        vertical-align: bottom;
+                    }
+                    a{
+                        figcaption{
+                            text-align: center;
+                            font-weight: 700;
+                            padding: 10px 0 0;
+                            @include bp-max(mobilePortrait){
+                                @include font-size(16);
+                            }
+                            @include bp(mobilePortrait){
+                                @include bp-max(xsmall){
+                                    @include font-size(17);
+                                }
+                            }
+                            @include font-size(18);
+                            color: $linktext;
+                        }
+                        &:hover{
+                            color: $hovertext;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

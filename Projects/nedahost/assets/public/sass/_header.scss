@@ -1,50 +1,98 @@
-.header{
-    background-image: url(../../images/nedahost.png);
+header{
+    background-image: url(/Projects/nedahost/assets/images/nedahost.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width:100vw;
     height: 100vh;
     max-width :100%;
-    color: $hdcolor ;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    .topheader{
-        order: 1;
-        align-self: flex-start;
-        margin: auto;
-        height: 0;
-        #logo{
-            text-align: center;
-            .svg-logo{
-                width: 15.6875rem;
-                height: auto;
+    .outerheader{
+        width:100vw;
+        height: 100vh;
+        max-width :100%;
+        color: $hdcolor ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include bp-max(mobilePortrait){
+            flex-direction: row;
+            align-items: stretch;
+        }
+        @include bp(mobilePortrait){
+            @include bp-max(xsmall){
+                flex-direction: row;
+                align-items: stretch;
             }
         }
-    }
-    .middleheader{
-        order: 2;
-        text-align: center;
-        margin: auto;
-        align-self: center;
-        &__text{
-            @include font-size(20);
-        }
 
-        &__centertext{
-            @include font-size(40);
-            padding: 10px 0;
+
+        @include bp(large){
+            flex-direction: column;
         }
-        
-        &__bottomtext{
-            @include font-size(13);
+        .topheader{
+            order: 1;
+            align-self: flex-start;
+            @include bp-max(mobilePortrait){
+                margin: 0 auto;
+            }
+            @include bp(mobilePortrait){
+                @include bp-max(xsmall){
+                    margin: auto;
+                }
+            }
+
+            @include bp(large){ 
+                margin:0 auto;
+            }
+            height: 0;
+            #logo{
+                text-align: center;
+                .svg-logo{
+                    width: 15rem;
+                    height: auto;
+                }
+            }
         }
-    }
-    .bottomheader{
-        order: 3;
-        align-self: flex-end;
+        .middleheader{
+            order: 2;
+            text-align: center;
+            margin: auto;
+            align-self: center;
+            &__text{
+                @include bp-max(mobilePortrait){
+                    @include font-size(15);
+                }
+            }
+            @include bp(mobilePortrait){
+                @include bp-max(xsmall){
+                    @include font-size(17);
+                }
+            }
+
+            &__centertext{
+                @include bp-max(mobilePortrait){
+                    @include font-size(30);
+                }
+                @include font-size(40);
+                padding: 10px 0;
+            }
+            
+            &__bottomtext{
+                @include bp-max(mobilePortrait){
+                    @include font-size(12);
+                }
+                @include bp(mobilePortrait){
+                    @include bp-max(xsmall){
+                        @include font-size(13);
+                    }
+                }
+                
+                @include font-size(13);
+            }
+        }
+        .bottomheader{
+            order: 3;
+            align-self: flex-end;
+        }
     }
 }
