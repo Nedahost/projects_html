@@ -4,13 +4,11 @@ header{
     background-repeat: no-repeat;
     background-size: contain;
     width:100vw;
-    height: 100vh;
+    height: 100%;
     max-width :100%;
     .outerheader{
-        width:100vw;
-        height: 100vh;
-        max-width :100%;
-        color: $hdcolor ;
+        height: 100%;
+        color: $hdcolor;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -35,9 +33,10 @@ header{
             @include bp-max(mobilePortrait){
                 margin: 0 auto;
             }
+            
             @include bp(mobilePortrait){
                 @include bp-max(xsmall){
-                    margin: auto;
+                    margin: 0 auto;
                 }
             }
 
@@ -47,6 +46,8 @@ header{
             height: 0;
             #logo{
                 text-align: center;
+                position: relative;
+                top: 60px;
                 .svg-logo{
                     width: 15rem;
                     height: auto;

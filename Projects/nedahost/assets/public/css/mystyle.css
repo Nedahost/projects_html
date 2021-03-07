@@ -42,9 +42,9 @@ ol, ul { list-style: none; margin: 0px; padding: 0px; }
 
 @media only screen and (min-width: 20em) and (max-width: xsmall-1px) { .hide-for-mobile { display: none; } }
 
-header { background-image: url(/Projects/nedahost/assets/images/nedahost.png); background-position: center; background-repeat: no-repeat; background-size: contain; width: 100vw; height: 100vh; max-width: 100%; }
+header { background-image: url(/Projects/nedahost/assets/images/nedahost.png); background-position: center; background-repeat: no-repeat; background-size: contain; width: 100vw; height: 100%; max-width: 100%; }
 
-header .outerheader { width: 100vw; height: 100vh; max-width: 100%; color: #ffffff; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+header .outerheader { height: 100%; color: #ffffff; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 @media (max-width: 319px) { header .outerheader { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; } }
 
@@ -58,13 +58,13 @@ header .outerheader .topheader { -webkit-box-ordinal-group: 2; -ms-flex-order: 1
 
 @media (max-width: 319px) { header .outerheader .topheader { margin: 0 auto; } }
 
-@media only screen and (min-width: 20em) and (max-width: 479px) { header .outerheader .topheader { margin: auto; } }
+@media only screen and (min-width: 20em) and (max-width: 479px) { header .outerheader .topheader { margin: 0 auto; } }
 
-@media only screen and (min-width: 20em) and (max-width: xsmall-1px) { header .outerheader .topheader { margin: auto; } }
+@media only screen and (min-width: 20em) and (max-width: xsmall-1px) { header .outerheader .topheader { margin: 0 auto; } }
 
 @media only screen and (min-width: 1280px) { header .outerheader .topheader { margin: 0 auto; } }
 
-header .outerheader .topheader #logo { text-align: center; }
+header .outerheader .topheader #logo { text-align: center; position: relative; top: 60px; }
 
 header .outerheader .topheader #logo .svg-logo { width: 15rem; height: auto; }
 
