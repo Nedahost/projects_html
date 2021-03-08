@@ -25,9 +25,17 @@ body{
     line-height: 1.3;
     @include font-size(13);
     height: 100%;
+
     @include bp-max(mobilePortrait){
         overflow-x: hidden;
     }
+
+    @include bp(mobilePortrait){
+        @include bp-max(xsmall){
+            overflow-x: hidden;
+        }
+    }
+
 }
 
 a, a:visited, a:hover{

@@ -23,6 +23,10 @@ body { background-color: #000e2f; font-family: "Roboto", sans-serif; margin: 0px
 
 @media (max-width: 319px) { body { overflow-x: hidden; } }
 
+@media only screen and (min-width: 20em) and (max-width: 479px) { body { overflow-x: hidden; } }
+
+@media only screen and (min-width: 20em) and (max-width: xsmall-1px) { body { overflow-x: hidden; } }
+
 a, a:visited, a:hover { text-decoration: none; }
 
 table { border-collapse: collapse; border-spacing: 0; }
