@@ -32,10 +32,10 @@ body{
 
     @include bp(mobilePortrait){
         @include bp-max(xsmall){
-            overflow-x: hidden; 
+            
         }
     }
-
+    overflow-x: hidden;
 }
 
 a, a:visited, a:hover{

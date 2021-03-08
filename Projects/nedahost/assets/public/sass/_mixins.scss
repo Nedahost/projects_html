@@ -9,7 +9,7 @@
 
       @else if $point == mobilePortrait {
         @media only screen
-        and (min-width : 20em) {
+        and (min-width : 320px) {
            @content; 
           }
     }
