@@ -32,7 +32,7 @@ body{
 
     @include bp(mobilePortrait){
         @include bp-max(xsmall){
-            overflow-x: hidden;
+            overflow-x: hidden; 
         }
     }
 
