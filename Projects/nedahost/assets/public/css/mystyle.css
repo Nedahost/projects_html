@@ -185,6 +185,12 @@ header .outerheader .bottomheader a { color: #ffffff; }
 
 .outerprojects__singleproject figure.projectimages figcaption { font-style: italic; font-size: 0.875rem; line-height: 24px; padding: 20px 0 0; }
 
+.outerprojects__singleproject figure.projectimages figcaption a { color: #000e2f; }
+
+.outerprojects__singleproject figure.projectimages figcaption a::after { content: "\00A0\203A"; }
+
+.outerprojects__singleproject figure.projectimages figcaption a:hover { color: #44bda9; }
+
 .footer_seeprojects { font-size: 20px; background-color: #44bda9; text-align: center; color: #ffffff; padding: 23px 0; letter-spacing: 4px; }
 
 .footer_seeprojects a { color: #ffffff; }

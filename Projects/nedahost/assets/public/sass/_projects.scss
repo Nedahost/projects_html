@@ -45,6 +45,15 @@
                 @include font-size(14);
                 line-height: 24px;
                 padding: 20px 0 0;
+                a{
+                    color: $linktext;
+                    &::after{
+                        content: "\00A0\203A";
+                    }
+                    &:hover{
+                        color: $hovertext;
+                    }
+                }
             }
         }
     }
