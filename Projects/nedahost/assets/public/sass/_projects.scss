@@ -1,0 +1,51 @@
+.outerprojects{
+    &__singleproject{
+        .contentproject{
+            text-align: center;
+            width: 900px;
+            margin: 0 auto 50px;
+            .titleproject{
+                h1{
+                    text-transform: uppercase;
+                    @include font-size(24);
+                    font-weight: 400;
+                }
+            }
+            .description{
+                line-height: 24px;
+            }
+            .projectservices{
+                padding: 35px 0 15px;
+                @include font-size(12);
+                color: $linktext;
+                text-transform: uppercase;
+                font-weight: 600;
+                ul{
+                    li{
+                        display: inline;
+                        &:nth-child(2n)::before{
+                            content: ' / ';
+                        }
+                    }
+                }
+            }
+        }
+        figure.projectimages{
+            margin: 0 auto 40px;
+            padding: 0;
+            max-width: 1000px;
+            img{
+                max-width: 1000px;
+                height: auto;
+                border: 0;
+                vertical-align: bottom;
+            }
+            figcaption{
+                font-style: italic;
+                @include font-size(14);
+                line-height: 24px;
+                padding: 20px 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.outerprojects {
+    &__allprojects{
+        display: grid;
+        
+        gap: 20px;
+        @include bp(large){ 
+            grid-template-columns: repeat(3, 1fr);
+        }
+        section{
+            @include bp(large){ 
+                margin-bottom: 100px;
+            }
+            .projectservices{
+                padding: 0 0 15px;
+                @include font-size(12);
+                color: $linktext;
+                text-transform: uppercase;
+                font-weight: 600;
+                ul{
+                    li{
+                        display: inline;
+                        &:first-child::before{
+                            content: "-- ";
+                        }
+                        &:nth-child(2n)::before{
+                            content: ' / ';
+                        }
+                    }
+                }
+            }
+            figure{
+                margin: 0;
+                padding: 0;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border: 0;
+                    vertical-align: bottom;
+                }
+                figcaption{
+                    padding-top: 30px;
+                    font-weight: 600;
+                    a{
+                        color: $linktext;
+                        &:hover{
+                            color: $hovertext;
+                        }
+                    }
+                }
+            }
+            &:nth-child(4n){
+                @include bp(large){ 
+                    grid-column: 1/4;
+                    margin: 0 auto 100px;
+                }
+                figure{
+                    img{
+                        max-width: 1200px;
+                    }
+                }
+            }
+        }
+    }
+}

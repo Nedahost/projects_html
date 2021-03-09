@@ -10,62 +10,25 @@ header{
         height: 100%;
         color: $hdcolor;
         display: grid;
-        flex-wrap: wrap;
+        grid-template-rows: repeat(3 , 1fr);
+        grid-template-columns: 1fr;
         justify-content: center;
-        @include bp-max(mobilePortrait){
-            flex-direction: row;
-            align-items: stretch;
-        }
-        @include bp(mobilePortrait){
-            @include bp-max(xsmall){
-                flex-direction: row;
-                align-items: stretch;
-            }
-        }
-
-        @include bp(large){
-            flex-direction: column;
-        }
         .topheader{
-            order: 1;
-            align-self: flex-start;
-            height: 0;
-            @include bp-max(mobilePortrait){
-                margin: 0 auto;
-            }
-            
-            @include bp(mobilePortrait){
-                @include bp-max(xsmall){
-                    margin: 0 auto;
-                }
-            }
-
-            @include bp(large){ 
-                margin:0 auto;
-            }
-
+            margin: auto;
             #navbar{
-
                 #logo{
-                    text-align: center;
-                    position: relative;
-                    top: 60px;
                     .svg-logo{
                         width: 15rem;
                         height: auto;
                     }
                 }
             }
-            
         }
         .middleheader{
-            order: 2;
             text-align: center;
             margin: auto;
-            align-self: center;
             &__text{
             
-
             @include bp-max(mobilePortrait){
                     @include font-size(15);
                 }
