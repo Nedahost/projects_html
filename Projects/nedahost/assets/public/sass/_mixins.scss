@@ -1,0 +1,87 @@
+
+@mixin bp($point) {
+    @if ($MQs) {
+      @if $point==xsmall {
+        @media #{$mq-xsmall} {
+          @content;
+        }
+      }
+
+      @else if $point == mobilePortrait {
+        @media only screen
+        and (min-width : 320px) {
+           @content; 
+          }
+    }
+
+      @else if $point==small {
+        @media #{$mq-small} {
+          @content;
+        }
+      } @else if $point==sm-md {
+        @media #{$mq-sm-md} {
+          @content;
+        }
+      } @else if $point==medium {
+        @media #{$mq-medium} {
+          @content;
+        }
+      } @else if $point==large {
+        @media #{$mq-large} {
+          @content;
+        }
+      } @else if $point==xlarge {
+        @media #{$mq-xlarge} {
+          @content;
+        }
+      } @else if $point==retina {
+        @media #{$mq-retina} {
+          @content;
+        }
+      }
+    } @else {
+      @if $point !=retina {
+        @content;
+      }
+    }
+  }
+  
+  @mixin bp-max($point) {
+    @if $point == xsmall {
+      @media (max-width: ($bp-xsmall - 1px)) {
+        @content;
+      }
+    }
+    @if $point==small {
+      @media (max-width: ($bp-small - 1px)) {
+        @content;
+      }
+    }
+    @else if $point==mobilePortrait {
+      @media (max-width: (320px - 1px)) {
+        @content;
+      }
+    }
+    @else if $point==medium {
+      @media (max-width: ($bp-medium - 1px)) {
+        @content;
+      }
+    } @else if $point==large {
+      @media (max-width: ($bp-large - 1px)) {
+        @content;
+      }
+    } @else if $point==xlarge {
+      @media (max-width: ($bp-xlarge - 1px)) {
+        @content;
+      }
+    } @else {
+      @media (max-width: ($point - 1px)) {
+        @content;
+      }
+    }
+  }
+
+@mixin font-size($sizeValue: 1.6) {
+    //font-size: ($sizeValue * 10) + px;
+    font-size: ($sizeValue / 16) + rem;
+}
