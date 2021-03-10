@@ -1,0 +1,120 @@
+.footer_seeprojects{
+    font-size: 20px;
+    background-color: #44bda9;
+    text-align: center;
+    color: #ffffff;
+    padding: 23px 0;
+    letter-spacing: 4px;
+    a{
+        color:#ffffff;
+    }
+}
+
+.footer{
+    color: $hovertext;
+    @include bp-max(mobilePortrait){
+        padding: 50px 10px 25px;
+    }
+
+    @include bp(mobilePortrait){
+        @include bp-max(xsmall){
+            padding: 50px 10px 25px;
+        }
+    }
+
+    @include bp(large){
+        padding: 100px 10px 55px;
+    }
+
+    #topfooter{
+        @include bp-max(mobilePortrait){
+            @include font-size(15);
+        }
+
+        @include bp(mobilePortrait){
+            @include bp-max(xsmall){
+                @include font-size(16);
+            }
+        }
+
+        @include bp(large){
+            width: 600px;
+            @include font-size(28);
+            line-height: 2.375rem; // 38px
+        }
+        
+    }
+    #middlefooter{
+        color: $hdcolor;
+        ul{
+            li{
+                padding: 0.9375rem 2.5rem 0.9375rem;
+                line-height: 22px;
+
+                @include bp-max(mobilePortrait){
+                    padding: 0.9375rem 2.5rem 0.9375rem;
+                    line-height: 22px;
+                    border-bottom: 1px solid #44bda9; 
+                }
+                
+                @include bp(mobilePortrait){
+                    @include bp-max(xsmall){
+                        
+                        border-bottom: 1px solid #44bda9; 
+                    }
+                }
+                
+                @include bp(large){
+                    float: left;
+                    width: 33.33%;
+                    border-right: 1px solid #44bda9;
+                     &:last-child{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        @include bp(large){
+            padding: 80px 0 170px;
+        }
+    
+    }
+    #bottomfooter{
+        text-align:center;
+        @include bp-max(mobilePortrait){
+            margin-top: 15px;
+        }
+        @include bp(mobilePortrait){
+            @include bp-max(xsmall){
+                margin-top: 15px;
+            }
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            li{
+                @include bp-max(mobilePortrait){
+                    padding: 5px 0;
+                }
+                @include bp(mobilePortrait){
+                    @include bp-max(xsmall){
+                        padding: 5px 0;
+                    }
+                }
+
+                @include bp(large){
+                    display: inline;
+                }
+                &:after{
+                    @include bp(large){
+                        content: "/";
+                        padding: 0 15px;
+                    }
+                }
+                &:last-child:after{
+                    content: " ";
+                }
+            }
+        }
+    }
+}

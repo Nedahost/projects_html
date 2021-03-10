@@ -1,0 +1,101 @@
+.outerprojects{
+    padding: 40px 0 30px;
+    &__Listprojects{
+        padding: 0 10px;
+        .homeprojects{
+            @include bp-max(mobilePortrait){
+                padding: 0 0 10px;
+            }
+            @include bp(mobilePortrait){
+                @include bp-max(xsmall){
+                    padding: 0 0 10px;
+                }
+            }
+            padding: 150px 0;
+            display: grid;
+            
+            .numberproject{
+                font-family: $f-secondary;
+                font-weight: 700;
+                color: $hovertext;
+                @include font-size(130);
+            }
+            .imgproject{
+                figure{
+                    margin: 0;
+                    padding: 0;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        border: 0;
+                        vertical-align: bottom;
+                    }
+                    a{
+                        figcaption{
+                            font-weight: 700;
+                            padding: 10px 0 0;
+                            @include bp-max(mobilePortrait){
+                                @include font-size(16);
+                            }
+                            @include bp(mobilePortrait){
+                                @include bp-max(xsmall){
+                                    @include font-size(17);
+                                }
+                            }
+                            @include font-size(18);
+                            color: $linktext;
+                        }
+                        &:hover{
+                            color: $hovertext;
+                        }
+                    }
+                }
+            }
+            &:nth-child(odd){
+                @include bp-max(mobilePortrait){
+                    grid-template-columns: none;
+                }
+                @include bp(mobilePortrait){
+                    @include bp-max(xsmall){
+                        grid-template-columns: none;
+                    }
+                }
+                grid-template-columns: 1fr 2fr;
+                .numberproject{
+                    text-align: right;
+                    position: relative;
+                    left: 25px;
+                    margin: auto 0;
+                }
+            }
+            &:nth-child(even){
+                @include bp-max(mobilePortrait){
+                    grid-template-columns: none;
+                }
+                @include bp(mobilePortrait){
+                    @include bp-max(xsmall){
+                        grid-template-columns: none;
+                    }
+                }
+                
+                grid-template-columns: 2fr 1fr;
+                .numberproject{
+                    order: 2;
+                    text-align: left;
+                    position: relative;
+                    right: 40px;
+                    margin: auto 0;
+                }
+                .imgproject{
+                    order: 1;
+                    figcaption{
+                        text-align: right;
+                    }
+                }
+            }                
+            &:nth-child(2){
+                padding: 0px;
+            }
+        }
+    }
+}
